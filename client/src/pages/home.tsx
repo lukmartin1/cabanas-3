@@ -17,8 +17,8 @@ import {
 } from "lucide-react";
 
 import heroImage from "@assets/generated_images/cab.jpg";
-import interiorImage from "@assets/generated_images/cab8.jpg";
-import deckImage from "@assets/generated_images/cab7.jpg";
+import interiorImage from "@assets/generated_images/cab6.jpg";
+import deckImage from "@assets/generated_images/cab4.jpg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
