@@ -16,9 +16,9 @@ import {
   Wind
 } from "lucide-react";
 
-import heroImage from "@assets/generated_images/modern_wooden_cabin_deep_in_a_misty_emerald_forest.png";
-import interiorImage from "@assets/generated_images/cozy_cabin_interior_surrounded_by_thick_forest_foliage.png";
-import deckImage from "@assets/generated_images/wooden_deck_in_the_middle_of_a_canopy_of_trees.png";
+import heroImage from "@assets/generated_images/cab.jpg";
+import interiorImage from "@assets/generated_images/cab8.jpg";
+import deckImage from "@assets/generated_images/cab7.jpg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
