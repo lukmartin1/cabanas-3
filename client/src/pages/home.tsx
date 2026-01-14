@@ -43,11 +43,11 @@ const Navbar = () => {
           <a className={`text-2xl font-serif font-bold tracking-tighter transition-colors ${
             scrolled ? "text-primary" : "text-white"
           }`}>
-            NORDIC<span className="font-light italic text-secondary ml-1">Refuge</span>
+            LA<span className="font-light italic text-secondary ml-1">ARBOLEDA</span>
           </a>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Menú de Escritorio */}
         <div className="hidden md:flex items-center space-x-10">
           {["Cabañas", "Servicios", "Blog", "Contacto"].map((item) => (
             <a 
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Toggle Móvil */}
         <button 
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +77,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menú Móvil */}
       {isOpen && (
         <motion.div 
           initial={{ opacity: 0, x: "100%" }}
@@ -144,7 +144,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Sección Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div 
           style={{ y: yHero, opacity: opacityHero }}
@@ -152,7 +152,7 @@ export default function Home() {
         >
           <img 
             src={heroImage} 
-            alt="Minimalist Cabin" 
+            alt="Cabaña Minimalista" 
             className="w-full h-[120%] object-cover"
           />
           <div className="absolute inset-0 bg-primary/20 backdrop-grayscale-[0.3]" />
@@ -165,41 +165,41 @@ export default function Home() {
             transition={{ duration: 1 }}
           >
             <span className="inline-block mb-6 text-xs tracking-[0.5em] uppercase font-bold text-white/70">
-              The Art of Isolation
+              El Arte del Aislamiento
             </span>
             <h1 className="font-serif text-6xl md:text-9xl font-bold mb-8 tracking-tighter">
-              SILENCE.
+              SILENCIO.
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto mb-12 font-light leading-relaxed">
-              Experience the brutal beauty of the mountain in our minimalist sanctuaries. 
-              Designed for those who seek clarity through quiet.
+              Vive la belleza brutal de la montaña en nuestros santuarios minimalistas. 
+              Diseñado para quienes buscan claridad a través de la quietud.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button size="lg" className="h-16 px-10 rounded-none bg-secondary hover:bg-secondary/90 text-white font-bold tracking-widest text-xs">
-                EXPLORE CABINS
+                EXPLORAR CABAÑAS
               </Button>
               <Button size="lg" variant="outline" className="h-16 px-10 rounded-none border-white text-white hover:bg-white hover:text-primary font-bold tracking-widest text-xs">
-                OUR STORY
+                NUESTRA HISTORIA
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Grid Content */}
+      {/* Contenido en Cuadrícula */}
       <section className="py-32 bg-background" id="cabañas">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-xl">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6">Designed for <br/><span className="italic text-secondary font-light">Contemplation</span></h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6">Diseñado para la <br/><span className="italic text-secondary font-light">Contemplación</span></h2>
               <p className="text-muted-foreground leading-relaxed">
-                Our cabins are not just places to sleep; they are frames for the landscape. 
-                Using raw materials and massive glass, we blur the line between interior and infinity.
+                Nuestras cabañas no son solo lugares para dormir; son marcos para el paisaje. 
+                Usando materiales crudos y grandes cristales, borramos la línea entre el interior y el infinito.
               </p>
             </div>
             <Link href="/cabins">
               <a className="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-secondary pb-2 hover:text-secondary transition-colors">
-                View all units
+                Ver todas las unidades
               </a>
             </Link>
           </div>
@@ -207,79 +207,79 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             <CabinCard 
               image={heroImage}
-              title="The Monolith"
+              title="El Monolito"
               price="$450"
-              subtitle="2 Guests · Peak View"
+              subtitle="2 Personas · Vista a la Cumbre"
             />
             <CabinCard 
               image={interiorImage}
-              title="Glass House"
+              title="Casa de Cristal"
               price="$320"
-              subtitle="2 Guests · Forest Floor"
+              subtitle="2 Personas · Suelo del Bosque"
             />
             <CabinCard 
               image={deckImage}
-              title="Obsidian Deck"
+              title="Terraza Obsidiana"
               price="$580"
-              subtitle="4 Guests · Valley Edge"
+              subtitle="4 Personas · Borde del Valle"
             />
           </div>
         </div>
       </section>
 
-      {/* Minimal Feature Section */}
+      {/* Sección de Características Minimalistas */}
       <section className="py-32 bg-muted/30 border-y border-border/50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-px bg-border/30">
             <FeatureCard 
               icon={Wind} 
-              title="Pure Air" 
-              description="High altitude location with zero industrial pollution."
+              title="Aire Puro" 
+              description="Ubicación a gran altitud con cero contaminación industrial."
             />
             <FeatureCard 
               icon={Flame} 
-              title="Basalt Fire" 
-              description="Central fireplaces built with local volcanic stone."
+              title="Fuego de Basalto" 
+              description="Chimeneas centrales construidas con piedra volcánica local."
             />
             <FeatureCard 
               icon={Trees} 
-              title="Old Growth" 
-              description="Surrounded by ancient forests under strict protection."
+              title="Bosque Ancestral" 
+              description="Rodeado de bosques antiguos bajo protección estricta."
             />
             <FeatureCard 
               icon={Coffee} 
-              title="Nordic Brew" 
-              description="Curated coffee selection from the world's best roasters."
+              title="Brew Nórdico" 
+              description="Selección de café curada de los mejores tostadores del mundo."
             />
           </div>
         </div>
       </section>
 
-      {/* Quote Section */}
+      {/* Sección de Cita */}
       <section className="py-40 bg-background text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-black text-muted/10 select-none -z-0">
-          STILLNESS
+          QUIETUD
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <blockquote className="font-serif text-3xl md:text-5xl max-w-4xl mx-auto leading-tight italic font-light">
-            "The mountains are calling and I must go, but only if there's a fireplace and a floor-to-ceiling window."
+            "Las montañas llaman y debo ir, pero solo si hay una chimenea y ventanales del suelo al techo."
           </blockquote>
           <div className="mt-12 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-secondary" />
-            <cite className="not-italic text-xs uppercase tracking-widest font-bold text-muted-foreground">Modern Nomad Magazine</cite>
+            <cite className="not-italic text-xs uppercase tracking-widest font-bold text-muted-foreground">Revista Modern Nomad</cite>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Pie de Página */}
       <footer className="bg-primary text-primary-foreground py-24 border-t border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-16 items-start">
             <div className="md:col-span-5">
-              <h3 className="font-serif text-3xl font-bold mb-6 tracking-tighter">NORDIC<span className="font-light italic text-secondary ml-1">Refuge</span></h3>
+              <h3 className="font-serif text-3xl font-bold mb-6 tracking-tighter">LA<span className="font-light italic text-secondary ml-1">ARBOLEDA</span></h3>
               <p className="text-primary-foreground/60 max-w-sm mb-8 leading-relaxed">
-                An architectural experiment in minimalism and nature. 
-                Located in the high peaks where silence is the only language spoken.
+                Un experimento arquitectónico en minimalismo y naturaleza. 
+                Ubicado en las altas cumbres donde el silencio es el único lenguaje.
               </p>
               <div className="flex gap-4">
                 <Button size="icon" variant="secondary" className="rounded-none bg-white/5 hover:bg-white/10 text-white border-0">
@@ -292,35 +292,35 @@ export default function Home() {
             </div>
             
             <div className="md:col-span-2">
-              <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Explore</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Explorar</h4>
               <ul className="space-y-4 text-sm font-medium text-primary-foreground/50">
-                <li><a href="#" className="hover:text-white transition-colors">Sanctuaries</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Philosophy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Availability</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Santuarios</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Filosofía</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Disponibilidad</a></li>
               </ul>
             </div>
 
             <div className="md:col-span-5">
-              <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Stay Informed</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Mantente Informado</h4>
               <div className="flex gap-2">
                 <input 
                   type="email" 
-                  placeholder="ENTER YOUR EMAIL" 
+                  placeholder="INGRESA TU EMAIL" 
                   className="bg-white/5 border border-white/10 rounded-none px-4 py-4 text-xs font-bold tracking-widest w-full focus:outline-none focus:border-secondary transition-colors"
                 />
                 <Button className="h-14 px-8 bg-secondary hover:bg-secondary/90 rounded-none text-xs font-bold tracking-widest">
-                  JOIN
+                  UNIRSE
                 </Button>
               </div>
             </div>
           </div>
           
           <div className="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-[0.3em] font-bold text-primary-foreground/30">
-            <p>&copy; 2024 NORDIC REFUGE EXPERIMENT. ALL RIGHTS RESERVED.</p>
+            <p>&copy; 2024 LA ARBOLEDA EXPERIMENT. TODOS LOS DERECHOS RESERVADOS.</p>
             <div className="flex gap-12 mt-6 md:mt-0">
-              <a href="#" className="hover:text-white">Privacy</a>
-              <a href="#" className="hover:text-white">Terms</a>
-              <a href="#" className="hover:text-white">Cookie Policy</a>
+              <a href="#" className="hover:text-white">Privacidad</a>
+              <a href="#" className="hover:text-white">Términos</a>
+              <a href="#" className="hover:text-white">Cookies</a>
             </div>
           </div>
         </div>
