@@ -9,126 +9,90 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* Rustic Luxury Theme Colors */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
-  
-  --color-chart-1: hsl(var(--chart-1));
-  --color-chart-2: hsl(var(--chart-2));
-  --color-chart-3: hsl(var(--chart-3));
-  --color-chart-4: hsl(var(--chart-4));
-  --color-chart-5: hsl(var(--chart-5));
 
   --font-sans: 'Lato', sans-serif;
   --font-serif: 'Playfair Display', serif;
   
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
-/* LIGHT MODE - Rustic & Natural */
+/* NEW PALETTE: Nord-Inspired Mist & Slate (Foggy Mountain Style) */
 :root {
-  /* Warm Off-White / Cream Background */
-  --background: 40 20% 97%;
-  /* Deep Forest Green Text */
-  --foreground: 140 30% 15%;
+  /* Soft Slate Background */
+  --background: 210 20% 98%;
+  /* Deep Navy-Grey Text */
+  --foreground: 210 30% 12%;
 
-  /* White Card Background */
   --card: 0 0% 100%;
-  --card-foreground: 140 30% 15%;
+  --card-foreground: 210 30% 12%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 140 30% 15%;
+  --popover-foreground: 210 30% 12%;
 
-  /* Primary: Deep Pine Green */
-  --primary: 135 25% 25%;
-  --primary-foreground: 40 20% 95%;
+  /* Primary: Deep Ocean Blue/Grey */
+  --primary: 210 25% 25%;
+  --primary-foreground: 210 20% 98%;
 
-  /* Secondary: Warm Terracotta / Wood */
-  --secondary: 25 35% 50%;
+  /* Secondary: Rust Orange (Contrast) */
+  --secondary: 18 60% 50%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Muted: Sage Green / Grey */
-  --muted: 100 10% 90%;
-  --muted-foreground: 140 10% 40%;
+  /* Muted: Cool Mist */
+  --muted: 210 15% 92%;
+  --muted-foreground: 210 10% 45%;
 
-  /* Accent: Soft Gold / Sand */
-  --accent: 35 40% 90%;
-  --accent-foreground: 25 35% 30%;
+  /* Accent: Silver Pine */
+  --accent: 180 10% 92%;
+  --accent-foreground: 180 30% 20%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 140 10% 85%;
-  --input: 140 10% 85%;
-  --ring: 135 25% 25%;
-
-  --chart-1: 135 25% 25%;
-  --chart-2: 25 35% 50%;
-  --chart-3: 173 58% 39%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
+  --border: 210 15% 88%;
+  --input: 210 15% 88%;
+  --ring: 210 25% 25%;
 }
 
 .dark {
-  /* Deep Night Green Background */
-  --background: 140 30% 8%;
-  --foreground: 40 10% 90%;
+  /* Midnight Slate */
+  --background: 220 25% 10%;
+  --foreground: 210 20% 90%;
 
-  --card: 140 30% 12%;
-  --card-foreground: 40 10% 90%;
+  --card: 220 25% 14%;
+  --card-foreground: 210 20% 90%;
 
-  --popover: 140 30% 12%;
-  --popover-foreground: 40 10% 90%;
+  --primary: 210 25% 60%;
+  --primary-foreground: 220 25% 5%;
 
-  --primary: 135 25% 45%;
-  --primary-foreground: 140 30% 10%;
-
-  --secondary: 25 35% 40%;
+  --secondary: 18 60% 60%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 140 20% 20%;
-  --muted-foreground: 140 10% 65%;
+  --muted: 220 20% 18%;
+  --muted-foreground: 210 10% 65%;
 
-  --accent: 140 20% 20%;
-  --accent-foreground: 40 10% 90%;
+  --accent: 180 15% 18%;
+  --accent-foreground: 210 20% 90%;
 
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-
-  --border: 140 20% 20%;
-  --input: 140 20% 20%;
-  --ring: 135 25% 45%;
-
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
+  --border: 220 20% 20%;
 }
 
 @layer base {
@@ -139,6 +103,6 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-semibold;
+    @apply font-serif font-semibold tracking-tight;
   }
 }
