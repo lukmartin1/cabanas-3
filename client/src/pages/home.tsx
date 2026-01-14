@@ -16,9 +16,9 @@ import {
   Wind
 } from "lucide-react";
 
-import heroImage from "@assets/generated_images/modern_minimalist_cabin_in_snowy_mountains_at_dawn.png";
-import interiorImage from "@assets/generated_images/cozy_cabin_interior_with_fireplace.png";
-import deckImage from "@assets/generated_images/cabin_deck_with_hot_tub_and_view.png";
+import heroImage from "@assets/generated_images/modern_wooden_cabin_deep_in_a_misty_emerald_forest.png";
+import interiorImage from "@assets/generated_images/cozy_cabin_interior_surrounded_by_thick_forest_foliage.png";
+import deckImage from "@assets/generated_images/wooden_deck_in_the_middle_of_a_canopy_of_trees.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,10 +40,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
-          <a className={`text-2xl font-serif font-bold tracking-tighter transition-colors ${
+          <a className={`text-2xl font-display font-black tracking-tighter transition-colors ${
             scrolled ? "text-primary" : "text-white"
           }`}>
-            LA<span className="font-light italic text-secondary ml-1">ARBOLEDA</span>
+            LA<span className="text-secondary ml-1">ARBOLEDA</span>
           </a>
         </Link>
 
