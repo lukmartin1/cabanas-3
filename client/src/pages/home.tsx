@@ -175,10 +175,19 @@ export default function Home() {
               Diseñado para quienes buscan claridad a través de la quietud.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button size="lg" className="h-16 px-10 rounded-none bg-secondary hover:bg-secondary/90 text-white font-bold tracking-widest text-xs">
+              <Button 
+                size="lg" 
+                className="h-16 px-10 rounded-none bg-secondary hover:bg-secondary/90 text-white font-bold tracking-widest text-xs cursor-pointer"
+                onClick={() => document.getElementById('cabañas')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 EXPLORAR CABAÑAS
               </Button>
-              <Button size="lg" variant="outline" className="h-16 px-10 rounded-none border-white text-white hover:bg-white hover:text-primary font-bold tracking-widest text-xs">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="h-16 px-10 rounded-none border-white text-white hover:bg-white hover:text-primary font-bold tracking-widest text-xs cursor-pointer"
+                onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 NUESTRA HISTORIA
               </Button>
             </div>
@@ -186,10 +195,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Intro Section - Added ID for link */}
+      <section className="py-24 md:py-32 bg-background relative overflow-hidden" id="nosotros">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -top-10 -left-10 w-full h-full border-2 border-secondary/30 rounded-lg translate-x-4 translate-y-4" />
+              <img 
+                src={interiorImage} 
+                alt="Interior Acogedor" 
+                className="relative rounded-lg shadow-2xl w-full aspect-[4/5] object-cover"
+              />
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">Nuestra Filosofía</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
+                Desconecta para <span className="italic text-secondary">Reconectar</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                En La Arboleda, creemos que la verdadera paz se encuentra en los detalles. 
+                Cada cabaña ha sido diseñada para integrarse armoniosamente con el entorno, 
+                ofreciendo una experiencia de inmersión total sin sacrificar el confort moderno.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Despierta con el sonido de los pájaros, disfruta de un café frente a la chimenea 
+                y termina el día bajo un cielo estrellado en tu terraza privada.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    <Trees size={20} />
+                  </div>
+                  <span className="font-medium text-foreground text-sm">Entorno Natural</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    <Wifi size={20} />
+                  </div>
+                  <span className="font-medium text-foreground text-sm">Starlink WiFi</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contenido en Cuadrícula */}
       <section className="py-32 bg-background" id="cabañas">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
             <div className="max-w-xl">
               <h2 className="font-serif text-5xl md:text-6xl mb-6">Diseñado para la <br/><span className="italic text-secondary font-light">Contemplación</span></h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -197,14 +264,15 @@ export default function Home() {
                 Usando materiales crudos y grandes cristales, borramos la línea entre el interior y el infinito.
               </p>
             </div>
-            <Link href="/cabins">
-              <a className="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-secondary pb-2 hover:text-secondary transition-colors">
-                Ver todas las unidades
-              </a>
-            </Link>
+            <a 
+              href="#cabañas"
+              className="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-secondary pb-2 hover:text-secondary transition-colors"
+            >
+              Ver todas las unidades
+            </a>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
             <CabinCard 
               image={heroImage}
               title="El Monolito"
@@ -228,9 +296,9 @@ export default function Home() {
       </section>
 
       {/* Sección de Características Minimalistas */}
-      <section className="py-32 bg-muted/30 border-y border-border/50">
+      <section className="py-32 bg-muted/30 border-y border-border/50" id="servicios">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-px bg-border/30">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border/30">
             <FeatureCard 
               icon={Wind} 
               title="Aire Puro" 
@@ -256,7 +324,7 @@ export default function Home() {
       </section>
 
       {/* Sección de Cita */}
-      <section className="py-40 bg-background text-center relative overflow-hidden">
+      <section className="py-40 bg-background text-center relative overflow-hidden" id="blog">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-black text-muted/10 select-none -z-0">
           QUIETUD
         </div>
@@ -294,13 +362,13 @@ export default function Home() {
             <div className="md:col-span-2">
               <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Explorar</h4>
               <ul className="space-y-4 text-sm font-medium text-primary-foreground/50">
-                <li><a href="#" className="hover:text-white transition-colors">Santuarios</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Filosofía</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Disponibilidad</a></li>
+                <li><a href="#cabañas" className="hover:text-white transition-colors">Santuarios</a></li>
+                <li><a href="#nosotros" className="hover:text-white transition-colors">Filosofía</a></li>
+                <li><a href="#contacto" className="hover:text-white transition-colors">Disponibilidad</a></li>
               </ul>
             </div>
 
-            <div className="md:col-span-5">
+            <div className="md:col-span-5" id="contacto">
               <h4 className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary mb-6">Mantente Informado</h4>
               <div className="flex gap-2">
                 <input 
